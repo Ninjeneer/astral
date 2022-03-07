@@ -10,9 +10,6 @@ type Props = NativeStackScreenProps<RootStackParamList, 'launch-details'>;
 
 const LaunchDetails: React.FC<Props> = ({ route }) => {
     const launch = route.params.launch;
-    // const dateOptions: Intl.DateTimeFormatOptions = {
-    //     weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-    // }
 
     let launchDate = format(new Date(Number(launch.sort_date) * 1000), 'EEEE dd LLLL yyyy', { locale: fr });
     launchDate = launchDate.charAt(0).toUpperCase() + launchDate.substring(1);
@@ -24,7 +21,7 @@ const LaunchDetails: React.FC<Props> = ({ route }) => {
         <View style={styles.container}>
 
             <View style={{ flexDirection: 'row', justifyContent: 'flex-start', marginBottom: 20 }}>
-                <Image source={require('../images/launch_icon.jpg')} style={{ width: 150, height: 150, resizeMode: 'contain' }} />
+                <Image source={require('../images/launch_icon.png')} style={{ width: 150, height: 150, resizeMode: 'contain' }} />
                 <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
                     <Text style={{ fontWeight: 'bold', fontSize: 25 }}>{launch.name}</Text>
                     <Text style={{ fontSize: 20 }}>Entreprise : {launch.provider.name}</Text>

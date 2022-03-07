@@ -1,4 +1,4 @@
-import { Button, FlatList, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native';
 
 import Launch from '../components/Launch';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -19,9 +19,7 @@ const LaunchList: React.FC = () => {
             .then((json) => setData(json.result))
     }
 
-    useEffect(() => {
-        refreshList
-    }, [])
+    useEffect(refreshList, [])
 
     return (
         <View style={styles.container}>

@@ -27,14 +27,16 @@ const App: React.FC = () => {
             headerStyle: { backgroundColor: 'black' },
             headerTintColor: 'white',
             headerTitleAlign: 'center',
-            headerTitleStyle: { fontSize: 25 }
+            headerTitleStyle: { fontSize: 25 },
+            statusBarStyle: 'inverted'
           }}></Stack.Screen>
 
         <Stack.Screen
           name="launch-details"
           component={LaunchDetails}
           options={{
-            title: 'Détails du lancement'
+            title: 'Détails du lancement',
+            statusBarStyle: 'dark'
           }}
         ></Stack.Screen>
       </Stack.Navigator>
